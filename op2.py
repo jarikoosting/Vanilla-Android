@@ -12,3 +12,9 @@ print(brown.tagged_words(categories='mystery')[99]) # I, PPSS
 print(brown.tagged_words(categories='mystery')[100]) # Suddenly, RB
 
 # Exercise 2C
+words = brown.tagged_words(categories='mystery')[:500]
+listOfWords = []
+[listOfWords.append(item[1]) for item in words if item[1] not in listOfWords]
+print(len(listOfWords)) # 61
+
+# Exercise 2D
